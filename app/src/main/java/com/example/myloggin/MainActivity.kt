@@ -36,6 +36,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
         val welcomePage = Intent(this, WelcomeActivity::class.java)
+        welcomePage.putExtra("userName",userName)
         startActivity(welcomePage)
     }
 
