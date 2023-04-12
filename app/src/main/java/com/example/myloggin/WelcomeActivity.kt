@@ -13,4 +13,5 @@ class WelcomeActivity : AppCompatActivity() {
         val message = "Bienvenido $userName"
         welcomeText.text = message
     }
+
 }

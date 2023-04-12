@@ -4,21 +4,111 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginBottom="500dp"
-        android:gravity="bottom|center"
+        android:layout_height="wrap_content"
+        android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="55dp">
 
         <TextView
             android:id="@+id/welcomeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Bienvenido"
             android:textSize="35sp" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="159dp"
+        android:layout_below="@+id/linearLayout1">
+        
+        <EditText
+            android:id="@+id/inputText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Ingresa iOS o Android" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/btn_color"
+            android:text="Enviar" />
+
+        <TextView
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout2"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="-16dp"
+        tools:layout_editor_absoluteY="310dp">
+
+        <CheckBox
+            android:id="@+id/check1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="Programación" />
+
+        <CheckBox
+            android:id="@+id/check2"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="Redes" />
+
+        <CheckBox
+            android:id="@+id/check3"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="Seguridad" />
+
+        <CheckBox
+            android:id="@+id/check4"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="Hardware" />
+
+        <CheckBox
+            android:id="@+id/check5"
+            android:layout_width="74dp"
+            android:layout_height="50dp"
+            android:layout_gravity="start|center_vertical"
+            android:text="Otra" />
+
+        <EditText
+            android:id="@+id/myTextOther"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:hint="Ingresa aquí su preferenciao"
+            android:visibility="gone" />
+    </LinearLayout>
+</RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

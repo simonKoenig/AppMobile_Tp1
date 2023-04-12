@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="50dp"
             android:paddingBottom="30dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/ic_launcher_foreground" />
 
         <TextView
             android:layout_width="wrap_content"
