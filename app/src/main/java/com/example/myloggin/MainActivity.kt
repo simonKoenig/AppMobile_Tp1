@@ -25,14 +25,16 @@ class MainActivity : AppCompatActivity() {
             message.setMessage("Complete los datos de inicio")
             val popup = message.create()
             popup.show()
+            return
         }
-        if (data[userName]==userPasswd){
+        if (data[userName]!=userPasswd){
             val message = AlertDialog.Builder(this)
             message.setTitle("Error al iniciar sesión")
             message.setMessage("Usuario inexistente o contraseña incorrecta")
             val popup = message.create()
             popup.show()
+            return
         }
-    }
 
+    }
 }
