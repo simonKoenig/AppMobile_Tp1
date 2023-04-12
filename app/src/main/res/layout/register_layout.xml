@@ -15,20 +15,21 @@
         app:layout_anchorGravity="center">
 
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingTop="50dp"
-            android:paddingBottom="30dp"
-            tools:srcCompat="@tools:sample/avatars" />
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="60dp"
+            android:text="Registrate"
+            android:textSize="60sp" />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="8dp"
-            android:text="Ingresa su correo y contraseña"
+            android:text="Ingresa tus datos para el regisrtro"
             android:textSize="20sp" />
 
         <EditText
@@ -53,32 +54,35 @@
             android:inputType="textPassword"
             android:textSize="15sp" />
 
-        <LinearLayout
+        <EditText
+            android:id="@+id/userConfirm"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="25dp"
+            android:hint="Confirme la contraseña"
+            android:inputType="textPassword"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:paddingBottom="50dp">
+
+        <Button
+            android:id="@+id/registerButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginRight="25dp"
-                android:backgroundTint="@color/btn_color"
-                android:text="Iniciar sesión" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="25dp"
-                android:text="¿No tiene una cuenta?" />
-
-
-        </LinearLayout>
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="25dp"
+            android:backgroundTint="@color/btn_color"
+            android:text="Registrar" />
     </LinearLayout>
 
 
