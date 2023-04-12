@@ -7,7 +7,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 
-val data = mapOf("Juan Torres" to "1234utn")
+val data = mapOf("Juan Torres" to "1234utn").toMutableMap()
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
