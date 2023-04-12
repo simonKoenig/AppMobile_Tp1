@@ -71,9 +71,6 @@
                 android:text="Iniciar sesión"
                 android:textColor="#FFFFFFFF" />
 
-
-
-
         </LinearLayout>
 
         <LinearLayout
