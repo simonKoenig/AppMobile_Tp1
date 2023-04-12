@@ -68,17 +68,29 @@
                 android:layout_marginRight="25dp"
                 android:backgroundTint="@color/btn_color"
                 android:onClick="loginFunction"
-                android:text="Iniciar sesión" />
+                android:text="Iniciar sesión"
+                android:textColor="#FFFFFFFF" />
 
-            <TextView
-                android:layout_width="wrap_content"
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="bottom|center"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginRight="25dp"
-                android:text="¿No tiene una cuenta?" />
-
-
+                android:backgroundTint="#4CAF50"
+                android:onClick="registerButton"
+                android:text="Registrate"
+                android:textColor="#FFFFFF" />
         </LinearLayout>
     </LinearLayout>
 

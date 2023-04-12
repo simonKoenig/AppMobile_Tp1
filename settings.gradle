@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "MyLoggin"
-include ':app'
+include ':app',':myloggin'

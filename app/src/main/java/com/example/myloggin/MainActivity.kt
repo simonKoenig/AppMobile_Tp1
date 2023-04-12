@@ -1,13 +1,13 @@
 package com.example.myloggin
 
 import android.app.AlertDialog
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
+
+val data = mapOf("Juan Torres" to "1234utn")
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun loginFunction(view: View) {
-        val data = mapOf("Juan Torres" to "1234utn")
+
         val userName = findViewById<EditText>(R.id.userName).text.toString()
         val userPasswd = findViewById<EditText>(R.id.userPasswd).text.toString()
         if (userName.isEmpty() || userPasswd.isEmpty()){
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
             popup.show()
             return
         }
-        if (data[userName]!=userPasswd){
+        if (data[userName]!=userPasswd) {
             val message = AlertDialog.Builder(this)
             message.setTitle("Error al iniciar sesión")
             message.setMessage("Usuario inexistente o contraseña incorrecta")
@@ -35,6 +35,13 @@ class MainActivity : AppCompatActivity() {
             popup.show()
             return
         }
-
+        val welcomePage = Intent(this, WelcomeActivity::class.java)
+        startActivity(welcomePage)
     }
+
+    fun registerButton(view: View){
+        val registerActivity = Intent(this, RegisterActivity::class.java)
+        startActivity(registerActivity)
+    }
+
 }
