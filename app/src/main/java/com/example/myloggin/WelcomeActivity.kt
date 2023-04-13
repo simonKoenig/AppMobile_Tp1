@@ -5,6 +5,7 @@ import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import android.app.AlertDialog
 import android.view.View
+import android.widget.CheckBox
 import android.widget.EditText
 
 
@@ -19,21 +20,17 @@ class WelcomeActivity : AppCompatActivity() {
     }
 
     fun showDialogFunction(view: View) {
-        val builder = AlertDialog.Builder(this)
-        builder.setTitle("Ingrese su texto")
-
-        val input = EditText(this)
-        builder.setView(input)
-
-        builder.setPositiveButton("Aceptar") { _, _ ->
-            val text = input.text.toString()
-        }
-        builder.setNegativeButton("Cancelar") { dialog, _ ->
-            dialog.cancel()
+        val checkBox = findViewById<CheckBox>(R.id.otroCheck)
+        val editText = findViewById<EditText>(R.id.otro)
+        checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
+            if (isChecked) {
+                editText.visibility = View.VISIBLE
+            } else {
+                editText.visibility = View.INVISIBLE
+            }
         }
 
-        val dialog = builder.create()
-        dialog.show()
+
     }
 
 }
