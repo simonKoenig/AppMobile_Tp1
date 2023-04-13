@@ -24,6 +24,17 @@
             android:layout_gravity="center"
             android:text="Bienvenido"
             android:textSize="35sp" />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione su sistema operativo"
+            android:layout_marginLeft="10dp"
+            android:gravity=""
+            android:textSize="20sp" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -31,30 +42,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="159dp"
         android:layout_below="@+id/linearLayout1">
-        
-        <EditText
-            android:id="@+id/inputText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:hint="Ingresa iOS o Android" />
 
-        <Button
-            android:id="@+id/submitButton"
+
+        <CheckBox
+            android:id="@+id/checkbox1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:shadowColor="@color/btn_color"
-            android:text="Enviar" />
+            android:onClick="onCheckboxClicked"
+            android:text="Android" />
 
-        <TextView
-            android:id="@+id/resultText"
-            android:layout_width="match_parent"
+        <CheckBox
+            android:id="@+id/checkbox2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp" />
+            android:checked="false"
+            android:onClick="onCheckboxClicked"
+            android:text="iOS" />
+
 
     </LinearLayout>
 
@@ -67,6 +75,16 @@
         android:orientation="vertical"
         tools:layout_editor_absoluteX="-16dp"
         tools:layout_editor_absoluteY="310dp">
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/resultText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Seleccione sus preferencias"
+            android:layout_marginLeft="10dp"
+            android:gravity=""
+            android:textSize="20sp" />
 
         <CheckBox
             android:id="@+id/check1"
@@ -109,6 +127,13 @@
             android:layout_height="50dp"
             android:hint="Ingresa aquí su preferenciao"
             android:visibility="gone" />
+
+        <Button
+            android:id="@+id/submitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:shadowColor="@color/btn_color"
+            android:text="Enviar" />
     </LinearLayout>
 </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
