@@ -1,6 +1,5 @@
 package com.example.myloggin
 
-import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -20,27 +19,15 @@ class RegisterActivity : AppCompatActivity() {
         val userPasswd = findViewById<EditText>(R.id.userPasswd).text.toString()
         val userConfirm = findViewById<EditText>(R.id.userConfirm).text.toString()
         if (userPasswd.isEmpty()||userPasswd.isEmpty()||userEmail.isEmpty()){
-            val message = AlertDialog.Builder(this)
-            message.setTitle("Advertencia")
-            message.setMessage("Debe completar sus datos para el registro")
-            val popup = message.create()
-            popup.show()
+            popupNotify("Advertencia","Debe completar sus datos para el registro",this)
             return
         }
         if (userPasswd.length<6){
-            val message = AlertDialog.Builder(this)
-            message.setTitle("Advertencia")
-            message.setMessage("La contraseña es demasiado corta")
-            val popup = message.create()
-            popup.show()
+            popupNotify("Advertencia","La contraseña es demasiado corta",this)
             return
         }
         if (userPasswd != userConfirm){
-            val message = AlertDialog.Builder(this)
-            message.setTitle("Advertencia")
-            message.setMessage("Las contraseñas no coinciden")
-            val popup = message.create()
-            popup.show()
+            popupNotify("Advertencia","Las contraseñas no coinciden",this)
             return
         }
         data[userName] = userPasswd
