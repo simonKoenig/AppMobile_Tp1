@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
     }
-
     fun loginFunction(view: View) {
 
         val userName = findViewById<EditText>(R.id.userName).text.toString()
@@ -41,10 +40,8 @@ class MainActivity : AppCompatActivity() {
         welcomePage.putExtra("userName",userName)
         startActivity(welcomePage)
     }
-
     fun registerButton(view: View){
         val registerActivity = Intent(this, RegisterActivity::class.java)
         startActivity(registerActivity)
     }
-
 }

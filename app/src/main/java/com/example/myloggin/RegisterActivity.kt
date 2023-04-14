@@ -22,6 +22,10 @@ class RegisterActivity : AppCompatActivity() {
             popupNotify("Advertencia","Debe completar sus datos para el registro",this)
             return
         }
+        if (data.containsKey(userName)){
+            popupNotify("Advertencia","El nombre de usuario ya esta en uso",this)
+            return
+        }
         if (userPasswd.length<6){
             popupNotify("Advertencia","La contraseña es demasiado corta",this)
             return

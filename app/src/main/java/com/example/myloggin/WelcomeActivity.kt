@@ -19,29 +19,12 @@ class WelcomeActivity : AppCompatActivity() {
         val userName = intent.getStringExtra("userName")
         val message = "Bienvenido $userName"
         welcomeText.text = message
-        val editText = findViewById<EditText>(R.id.otro)
-        editText.visibility = View.INVISIBLE
 
-        //iría en otra función
-        val androidCheck = findViewById<RadioButton>(R.id.android)
-        val iosCheck = findViewById<RadioButton>(R.id.ios)
-        val androidFoto = findViewById<ImageView>(R.id.androidFoto)
-        val iosFoto = findViewById<ImageView>(R.id.iosFoto)
-
-        androidCheck.setOnCheckedChangeListener { buttonView, isChecked ->
-            androidFoto.visibility = View.VISIBLE
-            iosFoto.visibility = View.GONE
-        }
-
-        iosCheck.setOnCheckedChangeListener { buttonView, isChecked ->
-            iosFoto.visibility = View.VISIBLE
-            androidFoto.visibility = View.GONE
-        }
     }
 
     fun desplegarTexto(view: View) {
         val checkBox = findViewById<CheckBox>(R.id.otroCheck)
-        val editText = findViewById<EditText>(R.id.otro)
+        val editText = findViewById<EditText>(R.id.editOtro)
         if (checkBox.isChecked) {
             editText.visibility = View.VISIBLE
         } else {
@@ -49,21 +32,14 @@ class WelcomeActivity : AppCompatActivity() {
         }
     }
 
-    /*fun cambiarFoto(view: View) {
-        val androidCheck = findViewById<RadioButton>(R.id.android)
-        val iosCheck = findViewById<RadioButton>(R.id.ios)
-        val androidFoto = findViewById<ImageView>(R.id.androidFoto)
-        val iosFoto = findViewById<ImageView>(R.id.iosFoto)
+    fun androidFoto(view: View){
+        val imagen = findViewById<ImageView>(R.id.osFoto)
+        imagen.setImageResource(R.drawable.android)
+    }
 
-        androidCheck.setOnCheckedChangeListener { buttonView, isChecked ->
-            androidFoto.visibility = View.VISIBLE
-            iosFoto.visibility = View.GONE
-        }
-
-        iosCheck.setOnCheckedChangeListener { buttonView, isChecked ->
-            iosFoto.visibility = View.VISIBLE
-            androidFoto.visibility = View.GONE
-        }
-    }*/
+    fun iosFoto(view: View){
+        val imagen = findViewById<ImageView>(R.id.osFoto)
+        imagen.setImageResource(R.drawable.ios)
+    }
 }
 

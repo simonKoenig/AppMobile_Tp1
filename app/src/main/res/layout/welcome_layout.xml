@@ -18,7 +18,7 @@
             tools:ignore="UselessParent">
 
             <ImageView
-                android:id="@+id/androidFoto"
+                android:id="@+id/osFoto"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_gravity="center"
@@ -27,22 +27,7 @@
                 android:adjustViewBounds="true"
                 android:src="@drawable/android"
                 android:contentDescription="utnLogo"
-                tools:ignore="HardcodedText"
-                android:visibility="gone"/>
-
-            <ImageView
-                android:id="@+id/iosFoto"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/ios"
-                android:contentDescription="utnLogo"
-                tools:ignore="HardcodedText"
-                android:visibility="gone"
-                />
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:id="@+id/linearLayout1"
@@ -65,7 +50,7 @@
                     android:id="@+id/resultText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:gravity=""
                     android:text="Seleccione su sistema operativo"
@@ -84,21 +69,23 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:orientation="horizontal"
-                    android:id="@+id/group"
-                    >
+                    android:orientation="horizontal">
 
                     <RadioButton
                         android:id="@+id/android"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Android" />
+                        android:text="Android"
+                        android:checked="true"
+                        android:onClick="androidFoto"
+                        />
 
                     <RadioButton
                         android:id="@+id/ios"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="iOS" />
+                        android:text="iOS"
+                        android:onClick="iosFoto"/>
                 </RadioGroup>
 
             </LinearLayout>
@@ -159,13 +146,11 @@
                     android:text="Otra" />
 
                 <EditText
-                    android:id="@+id/otro"
-                    android:layout_width="match_parent"
+                    android:id="@+id/editOtro"
+                    android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
                     android:hint="Ingresa aquí su preferencia"
-                     />
+                    android:visibility="invisible" />
 
 
             </LinearLayout>
@@ -183,6 +168,8 @@
                     android:id="@+id/submitButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:gravity="fill_vertical"
+                    android:paddingBottom="7dp"
                     android:shadowColor="@color/btn_color"
                     android:text="Enviar" />
 
