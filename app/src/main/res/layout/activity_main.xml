@@ -24,7 +24,7 @@
             android:layout_marginBottom="40dp"
             android:adjustViewBounds="true"
             android:contentDescription="Logo utn"
-            tools:srcCompat="@drawable/logo" />
+            android:src="@drawable/logo" />
 
         <TextView
             android:layout_width="wrap_content"
