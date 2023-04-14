@@ -31,7 +31,6 @@ class MainActivity : AppCompatActivity() {
             return
         }
         if (data[userName]!=userPasswd) {
-            val message = AlertDialog.Builder(this)
             popupNotify("Error al iniciar sesión","Usuario inexistente o contraseña incorrecta",this)
             return
         }
