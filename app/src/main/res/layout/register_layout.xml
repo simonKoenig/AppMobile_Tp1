@@ -92,10 +92,10 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
-            android:backgroundTint="@color/btn_color"
-            android:text="Registrar"
+            android:backgroundTint="#4CAF50"
             android:onClick="registrarse"
-            />
+            android:text="Registrar"
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 

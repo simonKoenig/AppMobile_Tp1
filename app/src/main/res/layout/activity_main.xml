@@ -16,12 +16,15 @@
 
 
         <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingTop="50dp"
-            android:paddingBottom="30dp"
-            tools:srcCompat="@drawable/ic_launcher_foreground" />
+            android:id="@+id/logoImg"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="40dp"
+            android:adjustViewBounds="true"
+            android:contentDescription="Logo utn"
+            tools:srcCompat="@drawable/logo" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -36,7 +39,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginLeft="25dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_marginRight="25dp"
             android:hint="Nombre de usuario"
             android:inputType="text"
@@ -68,6 +71,8 @@
                 android:layout_marginRight="25dp"
                 android:backgroundTint="@color/btn_color"
                 android:onClick="loginFunction"
+                android:paddingTop="15dp"
+                android:paddingBottom="15dp"
                 android:text="Iniciar sesión"
                 android:textColor="#FFFFFFFF" />
 
@@ -84,6 +89,7 @@
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="30dp"
                 android:backgroundTint="#4CAF50"
                 android:onClick="registerButton"
                 android:text="Registrate"

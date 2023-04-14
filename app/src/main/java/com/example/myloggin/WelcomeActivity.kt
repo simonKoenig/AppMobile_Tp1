@@ -29,8 +29,6 @@ class WelcomeActivity : AppCompatActivity() {
                 editText.visibility = View.INVISIBLE
             }
         }
-
-
     }
 
 }

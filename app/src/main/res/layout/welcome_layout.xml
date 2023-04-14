@@ -3,158 +3,169 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <LinearLayout
-        android:id="@+id/linearLayout1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="55dp">
-
-        <TextView
-            android:id="@+id/welcomeText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="Bienvenido"
-            android:textSize="35sp" />
-
-        <TextView
-            android:layout_marginTop="10dp"
-            android:id="@+id/resultText"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Seleccione su sistema operativo"
-            android:layout_marginLeft="10dp"
-            android:gravity=""
-            android:textSize="20sp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal"
-        android:layout_below="@+id/linearLayout1">
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            >
-
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/android"
-                android:text="Android"
-                />
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/ios"
-                android:text="iOS"/>
-        </RadioGroup>
-
-    </LinearLayout>
-
-
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout2"
-        android:gravity="center"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="-16dp"
-        tools:layout_editor_absoluteY="310dp">
-
-        <TextView
-            android:layout_marginTop="10dp"
-            android:id="@+id/resultText1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Seleccione sus preferencias"
-            android:layout_marginLeft="10dp"
-            android:gravity=""
-            android:textSize="20sp" />
-
-        <CheckBox
-            android:id="@+id/check1"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="start|center_vertical"
-            android:text="Programación" />
-
-        <CheckBox
-            android:id="@+id/check2"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="start|center_vertical"
-            android:text="Redes" />
-
-        <CheckBox
-            android:id="@+id/check3"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="start|center_vertical"
-            android:text="Seguridad" />
-
-        <CheckBox
-            android:id="@+id/check4"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:layout_gravity="start|center_vertical"
-            android:text="Hardware" />
-
-        <CheckBox
-            android:id="@+id/otroCheck"
-            android:layout_width="74dp"
-            android:layout_height="50dp"
-            android:layout_gravity="start|center_vertical"
-            android:onClick="showDialogFunction"
-            android:text="Otra" />
-
-        <EditText
-            android:id="@+id/otro"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:hint="Ingresa aquí su preferenciao"
-            android:visibility="gone" />
-
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent">
 
 
         <LinearLayout
-            android:id="@+id/linearLayout4"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/linearLayout3"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:orientation="vertical"
-            tools:layout_editor_absoluteY="600dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/submitButton"
-                android:layout_width="wrap_content"
+            <ImageView
+                android:id="@+id/logoImg"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="30dp"
+                android:adjustViewBounds="true"
+                tools:srcCompat="@drawable/wandroid" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="bottom"
-                android:shadowColor="@color/btn_color"
-                android:text="Enviar" />
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="55dp">
 
+                <TextView
+                    android:id="@+id/welcomeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="Bienvenido"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:id="@+id/resultText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity=""
+                    android:text="Seleccione su sistema operativo"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/android"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Android" />
+
+                    <RadioButton
+                        android:id="@+id/ios"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="iOS" />
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteX="-16dp"
+                tools:layout_editor_absoluteY="310dp">
+
+                <TextView
+                    android:id="@+id/resultText1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity=""
+                    android:text="Seleccione sus preferencias"
+                    android:textSize="20sp" />
+
+                <CheckBox
+                    android:id="@+id/check1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="Programación" />
+
+                <CheckBox
+                    android:id="@+id/check2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="Redes" />
+
+                <CheckBox
+                    android:id="@+id/check3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="Seguridad" />
+
+                <CheckBox
+                    android:id="@+id/check4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:text="Hardware" />
+
+                <CheckBox
+                    android:id="@+id/otroCheck"
+                    android:layout_width="74dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:onClick="showDialogFunction"
+                    android:text="Otra" />
+
+                <EditText
+                    android:id="@+id/otro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:hint="Ingresa aquí su preferenciao"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:layout_editor_absoluteY="600dp">
+
+                <Button
+                    android:id="@+id/submitButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:shadowColor="@color/btn_color"
+                    android:text="Enviar" />
+
+            </LinearLayout>
         </LinearLayout>
 
     </RelativeLayout>
