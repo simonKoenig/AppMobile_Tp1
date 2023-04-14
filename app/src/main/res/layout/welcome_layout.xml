@@ -138,15 +138,17 @@
                     android:layout_width="74dp"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:onClick="showDialogFunction"
+                    android:onClick="desplegarTexto"
                     android:text="Otra" />
 
                 <EditText
                     android:id="@+id/otro"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:hint="Ingresa aquí su preferenciao"
-                    android:visibility="gone" />
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="Ingresa aquí su preferencia"
+                     />
 
 
             </LinearLayout>
@@ -164,7 +166,6 @@
                     android:id="@+id/submitButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="bottom"
                     android:shadowColor="@color/btn_color"
                     android:text="Enviar" />
 
