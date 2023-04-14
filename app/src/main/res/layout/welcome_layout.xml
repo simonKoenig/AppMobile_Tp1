@@ -14,7 +14,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            tools:ignore="UselessParent">
 
             <ImageView
                 android:id="@+id/logoImg"
@@ -24,7 +25,9 @@
                 android:layout_marginTop="30dp"
                 android:layout_marginBottom="30dp"
                 android:adjustViewBounds="true"
-                tools:srcCompat="@drawable/wandroid" />
+                tools:srcCompat="@drawable/android"
+                android:contentDescription="utnLogo"
+                tools:ignore="HardcodedText" />
 
             <LinearLayout
                 android:id="@+id/linearLayout1"
