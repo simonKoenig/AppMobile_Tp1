@@ -17,7 +17,7 @@ class WelcomeActivity : AppCompatActivity() {
         setContentView(R.layout.welcome_layout)
         val welcomeText = findViewById<TextView>(R.id.welcomeText)
         val userName = intent.getStringExtra("userName")
-        val message = "Bienvenido $userName"
+        val message = "Bienvenido a la aplicacion $userName"
         welcomeText.text = message
 
     }

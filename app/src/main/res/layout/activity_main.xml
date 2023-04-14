@@ -23,15 +23,15 @@
             android:layout_marginTop="30dp"
             android:layout_marginBottom="40dp"
             android:adjustViewBounds="true"
-            android:contentDescription="Logo utn"
+            android:contentDescription="@string/logo_utn"
             android:src="@drawable/logo" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="8dp"
-            android:text="Ingresa su correo y contraseña"
+            android:text="@string/inputs"
             android:textSize="20sp" />
 
         <EditText
@@ -41,9 +41,11 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="30dp"
             android:layout_marginRight="25dp"
-            android:hint="Nombre de usuario"
+            android:hint="@string/nombre_de_usuario"
             android:inputType="text"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:autofillHints=""
+            tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
             android:id="@+id/userPasswd"
@@ -52,9 +54,11 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="25dp"
-            android:hint="Contraseña"
+            android:hint="@string/contrase_a"
             android:inputType="textPassword"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -73,8 +77,9 @@
                 android:onClick="loginFunction"
                 android:paddingTop="15dp"
                 android:paddingBottom="15dp"
-                android:text="Iniciar sesión"
-                android:textColor="#FFFFFFFF" />
+                android:text="@string/iniciar_sesi_n"
+                android:textColor="#FFFFFFFF"
+                tools:ignore="VisualLintButtonSize" />
 
         </LinearLayout>
 
@@ -92,8 +97,9 @@
                 android:layout_marginBottom="30dp"
                 android:backgroundTint="#4CAF50"
                 android:onClick="registerButton"
-                android:text="Registrate"
-                android:textColor="#FFFFFF" />
+                android:text="@string/registrate"
+                android:textColor="#263238"
+                tools:ignore="VisualLintButtonSize" />
         </LinearLayout>
     </LinearLayout>
 

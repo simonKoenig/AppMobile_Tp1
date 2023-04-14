@@ -40,10 +40,11 @@
 
                 <TextView
                     android:id="@+id/welcomeText"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:text="Bienvenido"
+                    android:gravity="center"
+                    android:text="@string/bienvenido"
                     android:textSize="35sp" />
 
                 <TextView
@@ -53,8 +54,9 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:gravity=""
-                    android:text="Seleccione su sistema operativo"
-                    android:textSize="20sp" />
+                    android:text="@string/plataforma_utilizada"
+                    android:textSize="20sp"
+                    tools:ignore="VisualLintBounds" />
 
             </LinearLayout>
 
@@ -75,17 +77,18 @@
                         android:id="@+id/android"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Android"
+                        android:layout_marginEnd="4dp"
                         android:checked="true"
                         android:onClick="androidFoto"
-                        />
+                        android:text="@string/android" />
 
                     <RadioButton
                         android:id="@+id/ios"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="iOS"
-                        android:onClick="iosFoto"/>
+                        android:layout_marginStart="4dp"
+                        android:onClick="iosFoto"
+                        android:text="@string/ios" />
                 </RadioGroup>
 
             </LinearLayout>
@@ -103,39 +106,40 @@
                     android:id="@+id/resultText1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
                     android:layout_marginTop="10dp"
                     android:gravity=""
-                    android:text="Seleccione sus preferencias"
-                    android:textSize="20sp" />
+                    android:text="@string/seleccione_sus_preferencias"
+                    android:textSize="20sp"
+                    tools:ignore="VisualLintBounds" />
 
                 <CheckBox
                     android:id="@+id/check1"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="Programación" />
+                    android:text="@string/programaci_n" />
 
                 <CheckBox
                     android:id="@+id/check2"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="Redes" />
+                    android:text="@string/redes" />
 
                 <CheckBox
                     android:id="@+id/check3"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="Seguridad" />
+                    android:text="@string/seguridad" />
 
                 <CheckBox
                     android:id="@+id/check4"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
-                    android:text="Hardware" />
+                    android:text="@string/hardware" />
 
                 <CheckBox
                     android:id="@+id/otroCheck"
@@ -143,14 +147,16 @@
                     android:layout_height="50dp"
                     android:layout_gravity="start|center_vertical"
                     android:onClick="desplegarTexto"
-                    android:text="Otra" />
+                    android:text="@string/otra" />
 
                 <EditText
                     android:id="@+id/editOtro"
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
-                    android:hint="Ingresa aquí su preferencia"
-                    android:visibility="invisible" />
+                    android:inputType="text"
+                    android:hint="@string/ingresa_aqu_su_preferencia"
+                    android:visibility="invisible"
+                    android:autofillHints="false" />
 
 
             </LinearLayout>
@@ -171,7 +177,7 @@
                     android:gravity="fill_vertical"
                     android:paddingBottom="7dp"
                     android:shadowColor="@color/btn_color"
-                    android:text="Enviar" />
+                    android:text="@string/enviar" />
 
             </LinearLayout>
         </LinearLayout>

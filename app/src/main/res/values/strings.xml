@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">TP1</string>
+    <string name="bienvenido">Bienvenido</string>
+    <string name="plataforma_utilizada">Plataforma utilizada:</string>
+    <string name="android">Android</string>
+    <string name="ios">iOS</string>
+    <string name="seleccione_sus_preferencias">Seleccione sus preferencias</string>
+    <string name="programaci_n">Programación</string>
+    <string name="redes">Redes</string>
+    <string name="seguridad">Seguridad</string>
+    <string name="hardware">Hardware</string>
+    <string name="otra">Otra</string>
+    <string name="ingresa_aqu_su_preferencia">Ingresa aquí su preferencia</string>
+    <string name="enviar">Enviar</string>
+    <string name="registrate">Registrate</string>
+    <string name="logo_utn">Logo utn</string>
+    <string name="inputs">Ingresa su correo y contraseña</string>
+    <string name="nombre_de_usuario">Nombre de usuario</string>
+    <string name="contrase_a">Contraseña</string>
+    <string name="iniciar_sesi_n">Iniciar sesión</string>
+    <string name="datos_registro">Ingresa tus datos para el regisrtro</string>
+    <string name="email">Email</string>
+    <string name="confirme_la_contrase_a">Confirme la contraseña</string>
+    <string name="registrar">Registrar</string>
 </resources>

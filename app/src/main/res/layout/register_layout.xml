@@ -18,18 +18,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="60dp"
-            android:text="Registrate"
+            android:text="@string/registrate"
             android:textSize="60sp" />
 
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="25dp"
+            android:layout_marginStart="25dp"
             android:layout_marginTop="8dp"
-            android:text="Ingresa tus datos para el regisrtro"
+            android:text="@string/datos_registro"
             android:textSize="20sp" />
 
         <EditText
@@ -39,9 +39,11 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="50dp"
             android:layout_marginRight="25dp"
-            android:hint="Nombre de usuario"
+            android:hint="@string/nombre_de_usuario"
             android:inputType="text"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
             android:id="@+id/userEmail"
@@ -50,9 +52,11 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="25dp"
-            android:hint="Email"
+            android:hint="@string/email"
             android:inputType="textEmailAddress"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
             android:id="@+id/userPasswd"
@@ -61,9 +65,11 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="25dp"
-            android:hint="Contraseña"
+            android:hint="@string/contrase_a"
             android:inputType="textPassword"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
 
         <EditText
             android:id="@+id/userConfirm"
@@ -72,9 +78,11 @@
             android:layout_marginLeft="25dp"
             android:layout_marginTop="15dp"
             android:layout_marginRight="25dp"
-            android:hint="Confirme la contraseña"
+            android:hint="@string/confirme_la_contrase_a"
             android:inputType="textPassword"
-            android:textSize="15sp" />
+            android:textSize="15sp"
+            android:importantForAutofill="no"
+            tools:ignore="VisualLintTextFieldSize" />
 
     </LinearLayout>
 
@@ -94,8 +102,9 @@
             android:layout_marginRight="25dp"
             android:backgroundTint="#4CAF50"
             android:onClick="registrarse"
-            android:text="Registrar"
-            android:textColor="#FFFFFF" />
+            android:text="@string/registrar"
+            android:textColor="#263238"
+            tools:ignore="VisualLintButtonSize" />
     </LinearLayout>
 
 

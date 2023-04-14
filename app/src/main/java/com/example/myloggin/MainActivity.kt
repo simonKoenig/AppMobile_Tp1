@@ -44,4 +44,6 @@ class MainActivity : AppCompatActivity() {
         val registerActivity = Intent(this, RegisterActivity::class.java)
         startActivity(registerActivity)
     }
+
+    fun registrarse(view: View) {}
 }
