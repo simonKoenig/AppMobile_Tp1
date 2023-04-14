@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
     fun loginFunction(view: View) {
-
         val userName = findViewById<EditText>(R.id.userName).text.toString()
         val userPasswd = findViewById<EditText>(R.id.userPasswd).text.toString()
         if (userName.isEmpty() || userPasswd.isEmpty()){
@@ -44,6 +43,4 @@ class MainActivity : AppCompatActivity() {
         val registerActivity = Intent(this, RegisterActivity::class.java)
         startActivity(registerActivity)
     }
-
-    fun registrarse(view: View) {}
 }
