@@ -16,8 +16,6 @@ fun popupNotify(titulo: String, contenido: String,context: AppCompatActivity){
     val popup = message.create()
     popup.show()
 }
-
-
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

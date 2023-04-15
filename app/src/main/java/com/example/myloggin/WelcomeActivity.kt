@@ -41,5 +41,8 @@ class WelcomeActivity : AppCompatActivity() {
         val imagen = findViewById<ImageView>(R.id.osFoto)
         imagen.setImageResource(R.drawable.ios)
     }
+    fun sendButton(view: View){
+        popupNotify("Exito","Los datos ingresados fueron guardados exitosamente",this)
+    }
 }
 

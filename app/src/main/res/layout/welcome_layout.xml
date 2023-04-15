@@ -11,176 +11,183 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            tools:ignore="UselessParent">
-
-            <ImageView
-                android:id="@+id/osFoto"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_gravity="center"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:adjustViewBounds="true"
-                android:src="@drawable/android"
-                android:contentDescription="utnLogo"
-                tools:ignore="HardcodedText" />
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:id="@+id/linearLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:orientation="vertical"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="55dp">
+                tools:ignore="UselessParent">
 
-                <TextView
-                    android:id="@+id/welcomeText"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                <ImageView
+                    android:id="@+id/osFoto"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
                     android:layout_gravity="center"
-                    android:gravity="center"
-                    android:text="@string/bienvenido"
-                    android:textSize="35sp" />
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:adjustViewBounds="true"
+                    android:contentDescription="utnLogo"
+                    android:src="@drawable/android"
+                    tools:ignore="HardcodedText" />
 
-                <TextView
-                    android:id="@+id/resultText"
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:gravity=""
-                    android:text="@string/plataforma_utilizada"
-                    android:textSize="20sp"
-                    tools:ignore="VisualLintBounds" />
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="55dp">
 
-            </LinearLayout>
+                    <TextView
+                        android:id="@+id/welcomeText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/bienvenido"
+                        android:textSize="35sp" />
 
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/resultText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity=""
+                        android:text="@string/plataforma_utilizada"
+                        android:textSize="20sp"
+                        tools:ignore="VisualLintBounds" />
 
-                <RadioGroup
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/android"
-                        android:layout_width="wrap_content"
+                    <RadioGroup
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginEnd="4dp"
-                        android:checked="true"
-                        android:onClick="androidFoto"
-                        android:text="@string/android" />
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                    <RadioButton
-                        android:id="@+id/ios"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="4dp"
-                        android:onClick="iosFoto"
-                        android:text="@string/ios" />
-                </RadioGroup>
+                        <RadioButton
+                            android:id="@+id/android"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="4dp"
+                            android:checked="true"
+                            android:onClick="androidFoto"
+                            android:text="@string/android" />
 
-            </LinearLayout>
+                        <RadioButton
+                            android:id="@+id/ios"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="4dp"
+                            android:onClick="iosFoto"
+                            android:text="@string/ios" />
+                    </RadioGroup>
 
-            <LinearLayout
-                android:id="@+id/linearLayout3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteX="-16dp"
-                tools:layout_editor_absoluteY="310dp">
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/resultText1"
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:gravity=""
-                    android:text="@string/seleccione_sus_preferencias"
-                    android:textSize="20sp"
-                    tools:ignore="VisualLintBounds" />
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteX="-16dp"
+                    tools:layout_editor_absoluteY="310dp">
 
-                <CheckBox
-                    android:id="@+id/check1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_gravity="start|center_vertical"
-                    android:text="@string/programaci_n" />
+                    <TextView
+                        android:id="@+id/resultText1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity=""
+                        android:text="@string/seleccione_sus_preferencias"
+                        android:textSize="20sp"
+                        tools:ignore="VisualLintBounds" />
 
-                <CheckBox
-                    android:id="@+id/check2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_gravity="start|center_vertical"
-                    android:text="@string/redes" />
+                    <CheckBox
+                        android:id="@+id/check1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:text="@string/programaci_n" />
 
-                <CheckBox
-                    android:id="@+id/check3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_gravity="start|center_vertical"
-                    android:text="@string/seguridad" />
+                    <CheckBox
+                        android:id="@+id/check2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:text="@string/redes" />
 
-                <CheckBox
-                    android:id="@+id/check4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_gravity="start|center_vertical"
-                    android:text="@string/hardware" />
+                    <CheckBox
+                        android:id="@+id/check3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:text="@string/seguridad" />
 
-                <CheckBox
-                    android:id="@+id/otroCheck"
-                    android:layout_width="74dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="start|center_vertical"
-                    android:onClick="desplegarTexto"
-                    android:text="@string/otra" />
+                    <CheckBox
+                        android:id="@+id/check4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:text="@string/hardware" />
 
-                <EditText
-                    android:id="@+id/editOtro"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:inputType="text"
-                    android:hint="@string/ingresa_aqu_su_preferencia"
-                    android:visibility="invisible"
-                    android:autofillHints="false" />
+                    <CheckBox
+                        android:id="@+id/otroCheck"
+                        android:layout_width="74dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="start|center_vertical"
+                        android:onClick="desplegarTexto"
+                        android:text="@string/otra" />
+
+                    <EditText
+                        android:id="@+id/editOtro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dp"
+                        android:autofillHints="false"
+                        android:hint="@string/ingresa_aqu_su_preferencia"
+                        android:inputType="text"
+                        android:visibility="invisible" />
 
 
-            </LinearLayout>
+                </LinearLayout>
 
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:gravity="center"
-                android:orientation="vertical"
-                tools:layout_editor_absoluteY="600dp">
-
-                <Button
-                    android:id="@+id/submitButton"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/linearLayout4"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="fill_vertical"
-                    android:paddingBottom="7dp"
-                    android:shadowColor="@color/btn_color"
-                    android:text="@string/enviar" />
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    tools:layout_editor_absoluteY="600dp">
 
+                    <Button
+                        android:id="@+id/submitButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="fill_vertical"
+                        android:onClick="sendButton"
+                        android:paddingBottom="7dp"
+                        android:shadowColor="@color/btn_color"
+                        android:text="@string/enviar" />
+
+                </LinearLayout>
             </LinearLayout>
-        </LinearLayout>
+        </ScrollView>
 
     </RelativeLayout>
 
